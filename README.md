@@ -18,3 +18,14 @@ In order to add new packages we create a file called requirements.txt and execut
 ```
 pip install -r requirements.txt
 ```
+##Deploying the function
+First, set the project ID with the following command
+
+```
+gcloud config set project [YOUR PROJECT ID]
+```
+Then we deploy our function with this command
+
+```
+gcloud functions deploy [FUNCTION NAME] --runtime python37 --trigger-http
+```
